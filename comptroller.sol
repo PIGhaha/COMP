@@ -773,6 +773,7 @@ import "./Comp.sol";
     * Note that `cTokenBalance` is the number of cTokens the account owns in the market,
     * whereas `borrowBalance` is the amount of underlying that the account has borrowed.
       */
+      //在计算账户流动性时避免堆栈深度限制的本地变量 
       struct AccountLiquidityLocalVars {
       uint sumCollateral;         //TODO 借款人所有抵押物的流动性（按美金计），注意是乘以抵押因子之后得到的数的和
       uint sumBorrowPlusEffects;  //借出的资金总价值（按美金计）
